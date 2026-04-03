@@ -90,6 +90,16 @@ export default function App() {
     }
   ];
 
+  const handleLinkClick = (linkId: string, linkTitle: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'outbound_link',
+        event_label: linkTitle,
+        transport_type: 'beacon'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f5f5f5] font-sans">
       <motion.div
@@ -141,6 +151,7 @@ export default function App() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleLinkClick(link.id, link.title)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
