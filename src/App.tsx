@@ -106,7 +106,7 @@ export default function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full min-h-screen sm:min-h-0 sm:max-w-[600px] sm:rounded-lg sm:shadow-md overflow-hidden relative flex flex-col"
+        className="w-full min-h-screen sm:max-w-[600px] sm:shadow-md overflow-hidden relative flex flex-col"
         style={{
           background: 'linear-gradient(180deg, #bdf2e8 0%, #e8b2f2 100%)'
         }}
