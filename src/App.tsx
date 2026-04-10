@@ -64,42 +64,48 @@ export default function App() {
       id: 'line',
       title: '加 Line 立即詢價 !!',
       icon: <LineIcon className="w-7 h-7" />,
-      color: 'bg-[#00c300] hover:bg-[#00b300]',
+      bgColor: 'rgba(0, 195, 0, 0.3)',
+      hoverBgColor: 'rgba(0, 195, 0, 0.5)',
       url: 'https://line.me/R/ti/p/@292zoclw' // 👈 在這裡替換成您的 LINE 連結，例如 'https://line.me/ti/p/xxxx'
     },
     {
       id: 'facebook',
       title: '在Facebook上關注我們',
       icon: <FIcon className="w-5 h-5" />,
-      color: 'bg-[#4267B2] hover:bg-[#365899]',
+      bgColor: 'rgba(66, 103, 178, 0.3)',
+      hoverBgColor: 'rgba(66, 103, 178, 0.5)',
       url: 'https://www.facebook.com/EuntayOfficial' // 👈 在這裡替換成您的 Facebook 連結
     },
     {
       id: 'linkedin',
       title: '在 Linkedin 上連結',
       icon: <InIcon className="w-5 h-5" />,
-      color: 'bg-[#0077b5] hover:bg-[#006699]',
+      bgColor: 'rgba(0, 119, 181, 0.3)',
+      hoverBgColor: 'rgba(0, 119, 181, 0.5)',
       url: 'https://linkedin.com/company/euntayofficial ' // 👈 在這裡替換成您的 Linkedin 連結
     },
     {
       id: 'youtube',
       title: '在 Youtube 觀看',
       icon: <YoutubeIcon className="w-5 h-5" />,
-      color: 'bg-[#d32f2f] hover:bg-[#b71c1c]',
+      bgColor: 'rgba(211, 47, 47, 0.3)',
+      hoverBgColor: 'rgba(211, 47, 47, 0.5)',
       url: 'https://www.youtube.com/@euntayelectrictaiwan5452' // 👈 在這裡替換成您的 Youtube 連結
     },
     {
       id: 'catalog',
       title: '觀看電子型錄',
       icon: <BookIcon className="w-5 h-5" />,
-      color: 'bg-[#3f51b5] hover:bg-[#303f9f]',
+      bgColor: 'rgba(63, 81, 181, 0.3)',
+      hoverBgColor: 'rgba(63, 81, 181, 0.5)',
       url: 'https://topwiner.com.tw/ebook/euntay/#p=1'
     },
     {
       id: 'map',
       title: '希望地圖找到 運泰Euntay!!',
       icon: <MapPinIcon className="w-5 h-5" />,
-      color: 'bg-[#2c2c2c] hover:bg-[#1a1a1a]',
+      bgColor: 'rgba(44, 44, 44, 0.3)',
+      hoverBgColor: 'rgba(44, 44, 44, 0.5)',
       url: 'https://maps.app.goo.gl/J9CdRqnuG4nGQcuX7' // 👈 在這裡替換成您的 Google Map 連結
     }
   ];
@@ -120,9 +126,9 @@ export default function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="w-full min-h-screen sm:max-w-[600px] sm:shadow-md overflow-hidden relative flex flex-col font-times"
+        className="w-full min-h-screen sm:max-w-[600px] sm:shadow-md overflow-hidden relative flex flex-col font-times bg-cover bg-center"
         style={{
-          background: 'linear-gradient(180deg, #bdf2e8 0%, #e8b2f2 100%)'
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("${import.meta.env.BASE_URL}background.jpg")`
         }}
       >
         <div className="px-6 py-12 flex-grow flex flex-col items-center">
@@ -142,7 +148,8 @@ export default function App() {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-[21px] font-medium text-gray-900 mb-2 text-center tracking-wide w-[300px] mx-auto font-arial"
+            className="text-[21px] font-medium text-white mb-2 text-center tracking-wide w-[300px] mx-auto font-arial"
+            style={{ textShadow: '0px 2px 4px rgba(0,0,0,0.8)' }}
           >
             運泰電機 Euntay Electric
           </motion.h1>
@@ -152,7 +159,8 @@ export default function App() {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-[16px] text-gray-800 mb-8 text-center tracking-wider w-[300px] mx-auto font-arial"
+            className="text-[16px] text-gray-200 mb-8 text-center tracking-wider w-[300px] mx-auto font-arial"
+            style={{ textShadow: '0px 1px 3px rgba(0,0,0,0.8)' }}
           >
             專注於 Roll to Roll 工業運動控制領域
           </motion.p>
@@ -166,17 +174,17 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleLinkClick(link.id, link.title)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, backgroundColor: link.bgColor }}
+                animate={{ opacity: 1, y: 0, backgroundColor: link.bgColor }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                whileHover={{ scale: 1.01, filter: "brightness(1.05)" }}
+                whileHover={{ scale: 1.01, backgroundColor: link.hoverBgColor, filter: "brightness(1.05)" }}
                 whileTap={{ scale: 0.99 }}
-                className={`flex items-center w-full px-6 py-4 rounded text-white shadow-sm transition-all ${link.color}`}
+                className={`flex items-center w-full px-6 py-4 rounded-2xl text-white shadow-lg transition-all backdrop-blur-md border border-white/40`}
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-8 mr-3">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 mr-3" style={{ filter: 'drop-shadow(0px 1px 3px rgba(0,0,0,0.4))' }}>
                   {link.icon}
                 </div>
-                <span className="text-left text-[17px] font-medium tracking-wide font-arial">
+                <span className="text-left text-[17px] font-medium tracking-wide font-arial" style={{ textShadow: '0px 1px 4px rgba(0,0,0,0.5)' }}>
                   {link.title}
                 </span>
               </motion.a>
