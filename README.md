@@ -1,6 +1,7 @@
 # 運泰電機 Euntay Electric - 官方連結導覽頁
 
 專注於 **Roll to Roll** 工業自動化運動控制領域。此專案為運泰電機的官方行動連結聚合頁，提供客戶快速、便捷的聯繫管道。
+https://rtyu4286.github.io/Euntay-Electric-pages/
 
 ## 🚀 主要功能
 
@@ -9,3 +10,5 @@
 - **影音展示**: 整合 Youtube 頻道，觀看最新的自動化解決方案。
 - **電子型錄**: 在線查閱最新的產品手冊與型錄。
 - **地理位置**: 整合 Google Map，輕鬆導航至運泰電機。
+
+<img width="400" height="400" alt="EUNTAY-QR CODE" src="https://github.com/user-attachments/assets/012870a4-2445-4ebe-97d8-55197418f1bc" />
