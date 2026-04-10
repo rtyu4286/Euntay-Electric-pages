@@ -1,20 +1,11 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 運泰電機 Euntay Electric - 官方連結導覽頁
 
-# Run and deploy your AI Studio app
+專注於 **Roll to Roll** 工業自動化運動控制領域。此專案為運泰電機的官方行動連結聚合頁，提供客戶快速、便捷的聯繫管道。
 
-This contains everything you need to run your app locally.
+## 🚀 主要功能
 
-View your app in AI Studio: https://ai.studio/apps/7420640c-bd2c-4db8-b033-94b2fb91a517
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **立即詢價**: 一鍵加入 LINE 官方帳號進行互動與諮詢。
+- **社群連結**: 快速造訪 Facebook 與 Linkedin 官方專頁。
+- **影音展示**: 整合 Youtube 頻道，觀看最新的自動化解決方案。
+- **電子型錄**: 在線查閱最新的產品手冊與型錄。
+- **地理位置**: 整合 Google Map，輕鬆導航至運泰電機。
