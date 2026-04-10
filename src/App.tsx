@@ -159,10 +159,10 @@ export default function App() {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-[16px] text-gray-200 mb-8 text-center tracking-wider w-[300px] mx-auto font-arial"
+            className="text-[16px] text-gray-200 mb-8 text-center tracking-wider w-[335px] mx-auto font-arial"
             style={{ textShadow: '0px 1px 3px rgba(0,0,0,0.8)' }}
           >
-            專注於 Roll to Roll 工業運動控制領域
+            專注於 Roll to Roll 工業自動化運動控制領域
           </motion.p>
 
           {/* Links */}
