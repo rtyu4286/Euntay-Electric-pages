@@ -128,7 +128,7 @@ export default function App() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full min-h-screen sm:max-w-[600px] sm:shadow-md overflow-hidden relative flex flex-col font-times bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("${import.meta.env.BASE_URL}bg.jpg")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("${import.meta.env.BASE_URL}background.jpg")`,
           backgroundSize: '100% 100%'
         }}
       >
