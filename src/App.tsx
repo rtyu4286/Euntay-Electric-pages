@@ -165,7 +165,7 @@ export default function App() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="px-6 py-18 flex-grow flex flex-col items-center z-10 relative">
+      <div className="px-6 pt-6 pb-12 flex-grow flex flex-col items-center z-10 relative">
         {/* Logo with clean hover floating & drop shadow */}
         <motion.div 
           initial={{ y: -25, opacity: 0 }}
@@ -176,7 +176,7 @@ export default function App() {
             scale: 1.05,
             transition: { type: "spring", stiffness: 300, damping: 15 }
           }}
-          className="mb-4 cursor-pointer"
+          className="mb-1 cursor-pointer"
         >
           <Logo className="w-[170px] h-[170px] mx-auto filter drop-shadow-[0_10px_20px_rgba(42,128,104,0.45)] relative z-10" />
         </motion.div>
